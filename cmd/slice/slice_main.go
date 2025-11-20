@@ -13,8 +13,7 @@ import (
 
 func main() {
 
-	var v int
-	fmt.Printf("%d\n", v)
+	fmt.Print("Inside slice main\n")
 
 	var caseVar string = "case1"
 	if len(os.Args) < 2 {
@@ -32,10 +31,11 @@ func main() {
 		myslice.CreateSliceDemo1() // 1.1
 		myslice.CreateSliceDemo2() // 1.2
 		myslice.CreateSliceDemo3() // 1.3
+		myslice.CreateSliceDemo4() // 1.4
 
-		// // 	Case 2
-		// case "case2":
-		// 	myslice.CreateSliceFromArray()
+	// 	Case 2
+	case "case2":
+		myslice.CreateSliceFromArray()
 
 		// // 	Case 3
 		// case "case3":
