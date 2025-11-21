@@ -38,9 +38,9 @@ func main() {
 		myslice.CreateSliceFromArrayDemo1() // 2.1
 		myslice.CreateSliceFromArrayDemo2() // 2.2
 
-		// Case 3
-		// case "case3":
-		// myslice.SliceCapacityDemo()
+	// Case 3
+	case "case3":
+		myslice.SliceCapacityDemo()
 
 		// // Case 4
 		// case "case4":
