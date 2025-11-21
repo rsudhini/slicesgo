@@ -42,13 +42,9 @@ func main() {
 	case "case3":
 		myslice.SliceCapacityDemo()
 
-		// // Case 4
-		// case "case4":
-		// 	numSlice := []int{1, 5, 7}
-		// 	var newSlice = make([]int, 10, 20)
-		// 	fmt.Printf("new slice before: %v\n", newSlice)
-		// 	myslice.CopySlice(newSlice, numSlice)
-		// 	fmt.Printf("new slice after: %v\n", newSlice)
+	// Case 4 Copying slice values from one slice to another slice
+	case "case4":
+		myslice.CopySliceDemo()
 
 		// // 	Case 5
 		// case "case5":
