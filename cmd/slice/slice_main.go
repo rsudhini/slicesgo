@@ -46,12 +46,11 @@ func main() {
 	case "case4":
 		myslice.CopySliceDemo()
 
-		// // 	Case 5
-		// case "case5":
-		// 	dataSlice1 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
-		// 	// dataSlice2 := []int{1, 2, 3, 4, 5, 6, 7, 8, 9}
-		// 	// dataSlice3 := []int{11, 91, 42, 56, 76, 84, 11, 23, 31, 9}
-		// 	myslice.ReverseSliceDemo(dataSlice1)
+	// Case 5
+	case "case5":
+		myslice.ReverseSliceDemo1() // 5.1
+		myslice.ReverseSliceDemo2() // 5.2
+		myslice.ReverseSliceDemo3() //5.3
 
 		// // 	Case 6
 		// case "case6":
