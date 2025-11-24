@@ -52,7 +52,7 @@ func main() {
 		myslice.ReverseSliceDemo2() // 5.2
 		myslice.ReverseSliceDemo3() // 5.3
 
-		//  Case 6
+	//  Case 6
 	case "case6":
 		myslice.ReverseSliceWithAdditionalSliceDemo()
 	}
