@@ -50,10 +50,10 @@ func main() {
 	case "case5":
 		myslice.ReverseSliceDemo1() // 5.1
 		myslice.ReverseSliceDemo2() // 5.2
-		myslice.ReverseSliceDemo3() //5.3
+		myslice.ReverseSliceDemo3() // 5.3
 
-		// // 	Case 6
-		// case "case6":
-		// 	myslice.ReverseSliceWithAdditionalSlice()
+		//  Case 6
+	case "case6":
+		myslice.ReverseSliceWithAdditionalSliceDemo()
 	}
 }
