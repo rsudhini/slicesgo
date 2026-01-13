@@ -2,7 +2,7 @@ package myslice
 
 import "fmt"
 
-func CreateSliceFromArrayDemo1() {
+func CreateSliceFromArrayDemo() {
 	// Creating an array
 	arr := [7]string{"This", "is", "the", "tutorial",
 		"of", "Go", "language"}
@@ -17,7 +17,7 @@ func CreateSliceFromArrayDemo1() {
 
 }
 
-func CreateSliceFromArrayDemo2() {
+func CreateSliceFromArrayFullDemo() {
 	// Creating an array
 	arr := [7]string{"This", "is", "the", "tutorial",
 		"of", "Go", "language"}

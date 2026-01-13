@@ -2,58 +2,71 @@ package myslice
 
 import "fmt"
 
-func CreateSliceDemo1() {
-	fmt.Println("Creating slice demo1")
-	// Empty slice is created with zero length and zero capacity
-	slice1 := []string{}
-	fmt.Println("slice1: ", slice1)
-	fmt.Println("length of slice: ", len(slice1))
-	fmt.Println("capacity of slice: ", cap(slice1))
+// CreateEmptySliceDemo creates empty slice using string literal with zero length and default capacity
+func CreateEmptySliceDemo() {
+	slice := []string{}
+	fmt.Println("CreateEmptySliceDemo - slice: ", slice)
+	fmt.Println("CreateEmptySliceDemo - length of slice: ", len(slice))
+	fmt.Println("CreateEmptySliceDemo - capacity of slice: ", cap(slice))
 }
 
-func CreateSliceDemo2() {
-	fmt.Println("Creating slice demo2")
-	slice2 := []string{}
-	// Appending a string so length and capacity increased by 1
-	slice2 = append(slice2, "Hello")
-	fmt.Println("slice2: ", slice2)
-	fmt.Println("length of slice: ", len(slice2))
-	fmt.Println("capacity of slice: ", cap(slice2))
-
-	// Appending a string so length and capacity increased by 1
-	slice2 = append(slice2, "Hi")
-	fmt.Println("slice2: ", slice2)
-	fmt.Println("length of slice: ", len(slice2))
-	fmt.Println("capacity of slice: ", cap(slice2))
-
-	// Appending a string so length increased by 1 and capacity increased by 2 because doubles
-	// once slice capacity is reached it normally doubles but this behavior can change slightly
-	// for higher capacity
-	slice2 = append(slice2, "Howdy")
-	fmt.Println("slice2: ", slice2)
-	fmt.Println("length of slice: ", len(slice2))
-	fmt.Println("capacity of slice: ", cap(slice2))
+// CreateEmptySliceUsingMakeDemo creates an empty slice using the make function with zero length.
+func CreateEmptySliceUsingMakeDemo() {
+	slice := make([]string, 0)
+	fmt.Println("CreateEmptySliceUsingMakeDemo - slice: ", slice)
+	fmt.Println("CreateEmptySliceUsingMakeDemo - length of slice: ", len(slice))
+	fmt.Println("CreateEmptySliceUsingMakeDemo - capacity of slice: ", cap(slice))
 }
 
-func CreateSliceDemo3() {
-	fmt.Println("Creating slice demo3")
-	// slice3 := make([]string, 3, 3)
-	slice3 := make([]string, 3) // succinct version, length and capacity are same
-	slice3[0] = "Hello"
-	// slice3[4] = "Hi" // This will give runtime error
-	fmt.Println("slice3: ", slice3)
-	fmt.Println("length of slice3: ", len(slice3))
-	fmt.Println("capacity of slice3: ", cap(slice3))
-}
-
-func CreateSliceDemo4() {
+// CreateSliceWithSameLenAndCapDemo creates slice using make function, slice length and capacity are same
+func CreateSliceWithSameLenCapDemo() {
 	fmt.Println("Creating slice demo4")
-	// succinct version, length and capacity are same
-	slice4 := make([]string, 3)
-	slice4[0] = "Hello"
-	fmt.Println("slice4: ", slice4)
-	fmt.Println("length of slice4: ", len(slice4))
-	fmt.Println("capacity of slice4: ", cap(slice4))
+	slice := make([]string, 3)
+	slice[0] = "Hello"
+	fmt.Println("CreateSliceWithSameLenAndCapDemo - slice: ", slice)
+	fmt.Println("CreateSliceWithSameLenAndCapDemo - length of slice: ", len(slice))
+	fmt.Println("CreateSliceWithSameLenAndCapDemo - capacity of slice4: ", cap(slice))
 }
 
-//
+// CreateSliceWithDiffLenCapDemo creates a slice with different length and capacity
+func CreateSliceWithDiffLenCapDemo() {
+	slice := make([]int, 3, 6)
+	fmt.Printf("CreateSliceWithDiffLenCapDemo - slice: %v\n", slice)
+	fmt.Printf("CreateSliceWithDiffLenCapDemo - slice length: %d\n", len(slice))
+	fmt.Printf("CreateSliceWithDiffLenCapDemo - slice capacity: %d\n", cap(slice))
+}
+
+// CreateSliceExplDeclDemo demonstrates explicit slice declaration using both
+// the left-hand side (var keyword) and the right-hand side (slice literal).
+func CreateSliceExplDeclDemo() {
+	var slice []int = []int{} // explicit declaration, no shorthand
+	fmt.Printf("CreateSliceExplDeclDemo - slice: %v\n", slice)
+	fmt.Printf("CreateSliceExplDeclDemo - slice length: %v\n", len(slice))
+	fmt.Printf("CreateSliceExplDeclDemo - slice capacity: %v\n", cap(slice))
+}
+
+// CreateSliceWithInitValuesDemo creates a slice using a slice literal with initialized values.
+func CreateSliceWithInitValuesDemo() {
+	slice := []int{1, 2, 3}
+	fmt.Printf("CreateSliceWithInitValuesDemo - slice: %v\n", slice)
+	fmt.Printf("CreateSliceWithInitValuesDemo - slice length: %v\n", len(slice))
+	fmt.Printf("CreateSliceWithInitValuesDemo - slice capacity: %v\n", cap(slice))
+}
+
+// CreateNilSliceDemo creates a nil slice.
+func CreateNilSliceDemo() {
+	var slice []int = CreateNilSlice()
+	fmt.Printf("CreateNilSliceDemo - slice: %v\n", slice)
+	fmt.Printf("CreateNilSliceDemo - slice length: %d\n", len(slice))
+	fmt.Printf("CreateNilSliceDemo - slice capacity: %d\n", cap(slice))
+
+	if slice == nil {
+		fmt.Println("CreateNilSliceDemo - slice is nil")
+	}
+}
+
+// CreateNilSlice is a helper func for CreateNilSliceDemo
+func CreateNilSlice() []int {
+	var slice []int
+	return slice
+}
